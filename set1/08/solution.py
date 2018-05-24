@@ -1,7 +1,7 @@
 from binascii import unhexlify
 
 def get_AES_ECB_score(msg, block_size = 16):
-	blocks_num = len(msg) // block_size - 1
+	blocks_num = len(msg) // block_size
 	score = 0
 	for i in range(blocks_num):
 		for j in range(i + 1, blocks_num):
